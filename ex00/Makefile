@@ -1,9 +1,9 @@
 NAME = megaphone
 
-FLAGS = -Wall -Wextra -Werror -g
+FLAGS = -Wall -Wextra -Werror -std=c++98 -g
 
 SOURCES = \
-        megaphone.cpp
+        main.cpp
 
 OBJS = $(SOURCES:.cpp=.o)
 
@@ -12,7 +12,7 @@ $(NAME): $(OBJS)
 
 all: $(NAME)
 
-$(OBJDIR)/%.o: srcs/%.c | $(OBJDIR)
+%.o: %.cpp
 	c++ $(FLAGS) -c $< -o $@
 
 clean:
