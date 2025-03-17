@@ -3,7 +3,7 @@ NAME = megaphone
 FLAGS = -Wall -Wextra -Werror -std=c++98 -g
 
 SOURCES = \
-        main.cpp
+        megaphone.cpp
 
 OBJS = $(SOURCES:.cpp=.o)
 
