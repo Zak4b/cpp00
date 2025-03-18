@@ -5,26 +5,16 @@
 class Contact
 {
 private:
-	/* data */
+	std::string first_name;
+	std::string last_name;
+	std::string nick_name;
+	std::string phone_number;
+	std::string secret;
 public:
-	std::string	name;
-	Contact(std::string name);
+	Contact(void);
+	Contact(std::string first_name, std::string last_name, std::string nick_name, std::string phone_number, std::string secret);
 	~Contact();
 	std::string	to_string(void);
 };
-
-Contact::Contact(std::string name)
-{
-	this->name = name;
-}
-
-Contact::~Contact()
-{
-}
-
-std::string Contact::to_string(void)
-{
-	return (this->name);
-}
 
 #endif

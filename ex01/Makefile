@@ -3,7 +3,9 @@ NAME = phone_book
 FLAGS = -Wall -Wextra -Werror -std=c++98 -g
 
 SOURCES = \
-        main.cpp
+        main.cpp \
+		Contact.cpp \
+		Phonebook.cpp \
 
 OBJS = $(SOURCES:.cpp=.o)
 
