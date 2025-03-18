@@ -11,7 +11,7 @@ static std::string	format_field(std::string field)
 	if (len > 10)
 		result = result.substr(0, 9) + ".";
 	else if (len < 10)
-		result.append(10 - len, ' ');
+		result = std::string((10 - len), ' ') + result;
 	return (result);
 }
 
@@ -28,7 +28,16 @@ Contact::~Contact()
 {
 }
 
-std::string Contact::to_string(void)
+std::string Contact::summarize(void)
 {
 	return (format_field(this->first_name) + "|" + format_field(this->last_name) + "|" + format_field(this->nick_name));
+}
+
+void	Contact::print(void)
+{
+	std::cout << this->first_name << std::endl;
+	std::cout << this->last_name << std::endl;
+	std::cout << this->nick_name << std::endl;
+	std::cout << this->phone_number << std::endl;
+	std::cout << this->secret << std::endl;
 }

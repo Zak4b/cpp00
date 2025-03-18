@@ -14,7 +14,8 @@ public:
 	Contact(void);
 	Contact(std::string first_name, std::string last_name, std::string nick_name, std::string phone_number, std::string secret);
 	~Contact();
-	std::string	to_string(void);
+	std::string	summarize(void);
+	void	print(void);
 };
 
 #endif

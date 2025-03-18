@@ -15,8 +15,8 @@ public:
 	PhoneBook(void);
 	~PhoneBook();
 	void	add(Contact new_contact);
+	void	print(void);
 	void	search(void);
 };
-
 
 #endif
