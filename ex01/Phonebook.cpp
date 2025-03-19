@@ -1,6 +1,6 @@
 #include "PhoneBook.hpp"
 #include <iostream>
-#include <stdlib.h>
+#include <sstream>
 
 PhoneBook::PhoneBook(void)
 : index(0), count(0)
@@ -32,12 +32,14 @@ void	PhoneBook::print(void)
 
 void	PhoneBook::search(void)
 {
+	if (this->count == 0)
+		return ;
 	this->print();
 	std::cout << "Index: ";
 	std::string a;
 	std::getline(std::cin, a);
-	int	index = atoi(a.c_str());
-	std::cout << index << std::endl;
+	int	index;
+	std::stringstream(a) >> index;
 	if (index < 1 || index > this->count)
 		return ;
 	int offset = (this->count < 8) ? 0 : this->index;
